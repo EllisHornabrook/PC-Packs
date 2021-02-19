@@ -5,7 +5,7 @@ import styles from "./Footer.module.scss";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <p>© 2021 PC Packs Ltd.</p>
+            <p>© 2021 PC Picks Ltd.</p>
             <Link to="/terms" className={styles.link}>
                 <p>Terms & Conditions</p>
             </Link>

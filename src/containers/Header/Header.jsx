@@ -5,7 +5,7 @@ import Nav from "../../components/Nav";
 const Header = () => {
     return (
         <header className={styles.header}>
-            <h1>PC Packs</h1>
+            <h1>PC Picks</h1>
             <Nav />
         </header>
     );
