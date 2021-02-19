@@ -4,12 +4,16 @@ import styles from "./ProductCard.module.scss";
 
 const ProductCard = () => {
     return (
-        <Link to="/product" className={styles.card} >
-            <img src="" alt="product" />
-            <p>Product Name</p>
-            <p>Product Price</p>
-            <button>Enter the draw</button>
-        </Link>
+        <div className={styles.cardContainer}>
+            <Link to="/product" className={styles.card}>
+                <img src="" alt="product" />
+                <p>GeForce RTX 3080 Graphics Card | NVIDIA</p>
+                <div className={styles.enter}>
+                    <p>Enter the draw</p>
+                    <b>£7.99</b>
+                </div>
+            </Link>
+        </div>
     );
 };
 

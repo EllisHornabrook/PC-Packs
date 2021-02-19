@@ -1,0 +1,41 @@
+.cardContainer {
+    height: 33%;
+    background-color: red;
+    padding: 9px;
+
+    .card {
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: inherit;
+
+        p {
+            font-size: 10px;
+        }
+
+        img {
+            height: 60%;
+        }
+
+        .enter {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            margin: 2% 0;
+
+            p, b {
+                font-size: 12px;
+            }
+
+            p {
+                text-decoration: underline;
+            }
+        }
+    }
+}
