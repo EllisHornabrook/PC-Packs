@@ -2,15 +2,29 @@ import React from "react";
 import { Link } from "@reach/router";
 import styles from "./ProductCard.module.scss";
 
-const ProductCard = () => {
+const ProductCard = (props) => {
+    const { 
+        itemName,
+        itemImg,
+        itemPrice,
+        raffleOdds,
+        itemInfo,
+        itemDetails,
+        maxTickets,
+        ticketCounter 
+    } = props.data;
+
     return (
         <div className={styles.cardContainer}>
             <Link to="/product" className={styles.card}>
-                <img src="" alt="product" />
-                <p>GeForce RTX 3080 Graphics Card | NVIDIA</p>
-                <div className={styles.enter}>
+                <div className={styles.oddsContainer}>
+                    <p>{raffleOdds}</p>
+                </div>
+                <img src={itemImg} alt="product" />
+                <h3>{itemName}</h3>
+                <div className={styles.enterDraw}>
                     <p>Enter the draw</p>
-                    <b>£7.99</b>
+                    <b>£{itemPrice}</b>
                 </div>
             </Link>
         </div>
