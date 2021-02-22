@@ -1,7 +1,11 @@
 .products {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 80vh;
+    grid-template-rows: 1fr 1fr 1fr;
+    min-height: 80vh;
+    height: auto;
     width: 90vw;
-    background-color: blue;
+    background-color: #070c10;
+    border-radius: 12px;
+    padding: 6px;
 }

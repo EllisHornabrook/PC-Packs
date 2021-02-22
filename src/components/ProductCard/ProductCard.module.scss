@@ -1,15 +1,18 @@
 .cardContainer {
-    height: 33%;
-    background-color: red;
-    padding: 9px;
+    height: 26vh;
+    padding: 6px;
+    position: relative;
+
+    .card, .enterDraw, .itemInfo {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
 
     .card {
-        background-color: pink;
-        display: flex;
+        background-color: #002a4b;
         flex-direction: column;
-        align-items: center;
         height: 100%;
-        width: 100%;
         padding: 5px;
         border-radius: 10px;
         text-decoration: none;
@@ -23,18 +26,49 @@
             height: 60%;
         }
 
-        .enter {
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
+        h3 {
+            font-size: 10px;
+            font-weight: normal;
+            height: 35%;
+            width: 95%;
+        }
+
+        .oddsContainer {
+            background-color: #fffeee;
+            border: 1px solid black;
+            padding: 0 2px;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 11px;
+            margin-right: 11px;
+
+            p {
+                font-size: 10px;
+            }
+        }
+        
+        .enterDraw {
+            justify-content: center;
             margin: 2% 0;
 
             p, b {
-                font-size: 12px;
+                font-size: 11px;
+                cursor: pointer;
             }
 
             p {
                 text-decoration: underline;
+                border-radius: 15px 0 0 15px;
+                padding: 1px 2px 2px 4px;
+                background-color: pink;
+            }
+
+            b {
+                padding: 1px 4px 2px 1px;
+                background-color: #fa96a7;
+                border-radius: 0 15px 15px 0;
             }
         }
     }
