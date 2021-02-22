@@ -7,13 +7,13 @@ import Footer from "./containers/Footer";
 
 const App = () => {
     return (
-        <div className={styles.app}>
+        <>
             <Header />
 
             <Routes />
 
             <Footer />
-        </div>
+        </>
     );
 };
 
