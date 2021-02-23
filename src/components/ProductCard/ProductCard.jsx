@@ -8,10 +8,10 @@ const ProductCard = (props) => {
         itemImg,
         itemPrice,
         raffleOdds,
-        itemInfo,
-        itemDetails,
-        maxTickets,
-        ticketCounter 
+        // itemInfo,
+        // itemDetails,
+        // maxTickets,
+        // ticketCounter 
     } = props.data;
 
     return (
@@ -21,10 +21,10 @@ const ProductCard = (props) => {
                     <p>{raffleOdds}</p>
                 </div>
                 <img src={itemImg} alt="product" />
-                <h3>{itemName}</h3>
+                <h3><span>{itemName}</span></h3>
                 <div className={styles.enterDraw}>
                     <p>Enter the draw</p>
-                    <b>£{itemPrice}</b>
+                    <p>£{itemPrice}</p>
                 </div>
             </Link>
         </div>
