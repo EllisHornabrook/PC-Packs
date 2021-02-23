@@ -4,11 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Nav.module.scss";
 
 const Nav = () => {
+    const userCheck = (user) => {
+        if (!user) {
+            return <FontAwesomeIcon icon={["far", "user"]} className={styles.icon} />
+        } else {
+            return <FontAwesomeIcon icon={"user"} className={styles.icon} />
+        };
+    } ;
+
     return (
         <div className={styles.nav}>
             <Link to="/" className={styles.link}>
-                <FontAwesomeIcon icon={["far", "user"]} className={styles.icon} />
-                <FontAwesomeIcon icon={"user"} className={styles.icon} />
+                {userCheck()}
             </Link>
             <Link to="/" className={styles.link}>
                 <FontAwesomeIcon icon={"shopping-cart"} className={styles.icon} />
