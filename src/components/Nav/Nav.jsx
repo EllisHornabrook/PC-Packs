@@ -20,9 +20,9 @@ const Nav = () => {
             <Link to="/" className={styles.link}>
                 <FontAwesomeIcon icon={"shopping-cart"} className={styles.icon} />
             </Link>
-            <button>
+            <div>
                 <FontAwesomeIcon icon={"bars"} className={styles.icon} />
-            </button>
+            </div>
         </div>
     );
 };
