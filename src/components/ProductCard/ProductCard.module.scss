@@ -1,5 +1,7 @@
+@import "../../styles/styles.scss";
+
 .cardContainer { 
-    padding: 6px;
+    margin: 5px;
     position: relative;
 
     .card, .enterDraw, .itemInfo {
@@ -9,38 +11,36 @@
     }
 
     .card {
-        background-color: #002a4b;
         flex-direction: column;
         height: 100%;
         padding: 5px;
-        border-radius: 10px;
         text-decoration: none;
         color: inherit;
+        border-bottom: 2px solid $secondary;
 
         img {
             max-height: 50%;
             height: auto;
-            width: 99%;
+            width: 100%;
             margin-bottom: auto;
-            border-radius: 6px 0 0 0;
+            border-radius: 0 8px 0 0;
         }
 
         h3 {
             font-size: 10px;
             font-weight: normal;
             width: 95%;
-            color: aliceblue;
+            color: $secondary;
             
 
             span {
-                background-color: #002a4b;
+                background-color: $main;
                 text-decoration: overline;
             }
         }
 
         .oddsContainer {
-            background-color: aliceblue;
-            border: 1px solid #070c10;
+            background-color: $secondary;
             padding: 0 2px;
             font-weight: bold;
             position: absolute;
@@ -48,7 +48,7 @@
             right: 0;
             margin-top: 5px;
             margin-right: 5px;
-            border-radius: 0 6px 0 0;
+            border-radius: 0 8px 0 0;
 
             p {
                 font-size: 10px;
