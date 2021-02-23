@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./App.css";
+import "./App.css";
 import "./data/fa-library";
 import Header from "./containers/Header";
 import Routes from "./containers/Routes";
