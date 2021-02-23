@@ -3,14 +3,15 @@
     justify-content: space-evenly;
     bottom: 0;
     width: 100%;
-    background-color: grey;
-    height: 4vh;
+    height: 11vh;
+    background-color: #002a4b;
+    border-top: 2px solid aliceblue;
 
     p, a {
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 10px;
-        color: inherit;
+        color: aliceblue;
     }
 }
