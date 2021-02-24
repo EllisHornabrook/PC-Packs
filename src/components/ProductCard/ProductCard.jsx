@@ -15,7 +15,7 @@ const ProductCard = (props) => {
     } = props.data;
 
     return (
-        <div className={styles.cardContainer}>
+        <article className={styles.cardContainer}>
             <Link to="/product" className={styles.card}>
                 <div className={styles.oddsContainer}>
                     <p>{raffleOdds}</p>
@@ -27,7 +27,7 @@ const ProductCard = (props) => {
                     <p>£{itemPrice}</p>
                 </div>
             </Link>
-        </div>
+        </article>
     );
 };
 

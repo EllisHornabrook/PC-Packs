@@ -3,9 +3,14 @@ import styles from "./PrivacyPolicy.module.scss";
 
 const PrivacyPolicy = () => {
     return (
-        <div className={styles.policy}>
-            <p>Privacy Policy ...</p>
-        </div>
+        <main className={styles.policy}>
+            <header>
+                <h1>Privacy Policy</h1>
+            </header>
+            <section>
+                <p>sample text</p>
+            </section>
+        </main>
     );
 };
 

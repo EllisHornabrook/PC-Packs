@@ -3,9 +3,14 @@ import styles from "./Terms.module.scss";
 
 const Terms = () => {
     return (
-        <div className={styles.terms}>
-            <p>Terms & Conditions ...</p>
-        </div>
+        <main className={styles.terms}>
+            <header>
+                <h1>Terms & Conditions</h1>
+            </header>
+            <section>
+                <p>sample text</p>
+            </section>
+        </main>
     );
 };
 

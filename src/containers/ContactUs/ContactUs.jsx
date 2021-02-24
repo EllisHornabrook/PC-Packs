@@ -3,12 +3,16 @@ import styles from "./ContactUs.module.scss";
 
 const ContactUs = () => {
     return (
-        <div className={styles.contact}>
-            <p>Contact Us</p>
-            <p>Phone</p>
-            <p>Email</p>
-            <p>Location</p>
-        </div>
+        <main className={styles.contact}>
+            <header>
+                <h1>Contact Us</h1>
+            </header>
+            <section>
+                <p>Phone</p>
+                <p>Email</p>
+                <p>Location</p>
+            </section>
+        </main>
     );
 };
 

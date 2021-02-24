@@ -12,9 +12,9 @@ const ProductList = () => {
 
     
     return (
-        <div className={styles.products}>
+        <section className={styles.products}>
             {itemMap()}
-        </div>
+        </section>
     );
 };
 
