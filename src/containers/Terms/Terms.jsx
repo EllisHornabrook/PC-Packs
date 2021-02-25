@@ -7,6 +7,7 @@ const Terms = () => {
             <header>
                 <h1>Terms & Conditions</h1>
             </header>
+            <div className={styles.divider} />
             <section>
                 <p>sample text</p>
             </section>

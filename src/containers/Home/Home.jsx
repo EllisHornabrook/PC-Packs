@@ -9,12 +9,12 @@ const Home = () => {
                 <h1>Welcome to the site</h1>
             </header>
             <ProductList />
+            <div className={styles.divider} />
             <section>
-                <div className={styles.divider} />
                 <p>How to play</p>
             </section>
+            <div className={styles.divider} />
             <section>
-                <div className={styles.divider} />
                 <p>More about the site</p>
             </section>
         </main>

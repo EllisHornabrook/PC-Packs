@@ -7,6 +7,7 @@ const ContactUs = () => {
             <header>
                 <h1>Contact Us</h1>
             </header>
+            <div className={styles.divider} />
             <section>
                 <p>Phone</p>
                 <p>Email</p>

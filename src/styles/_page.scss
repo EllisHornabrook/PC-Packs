@@ -14,19 +14,24 @@ main {
             margin: 1vh 0;
             font-size: $header-font-size;
             color: $secondary-colour;
+            padding: 0 5%;
         }
     }
     
     section {
+        margin: 2vh 0;
+
         p {
             font-size: $page-font-size;
             color: $secondary-colour;
+            padding: 0 5%;
+            
         }
     }
 
     header, section {
         width: 100%;
-    }
+    }   
 }
 
 .header, .footer {
@@ -36,4 +41,10 @@ main {
     height: 11vh;
     background-color: $main-colour;
     color: $secondary-colour;
+}
+
+.divider {
+    background-color: $secondary-colour;
+    height: 2px;
+    width: 100%;
 }

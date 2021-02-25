@@ -7,6 +7,7 @@ const NotFound = () => {
             <header>
                 <h1>PAGE NOT FOUND</h1>
             </header>
+            <div className={styles.divider} />
             <section>
                 <p>sample text</p>
             </section>
