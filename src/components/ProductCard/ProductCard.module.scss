@@ -1,10 +1,10 @@
 @import "../../styles/styles.scss";
 
 .cardContainer { 
-    margin: 5px;
+    margin: 1vh 2vw;
     position: relative;
 
-    .card, .enterDraw, .itemInfo {
+    .card, .itemInfo {
         display: flex;
         width: 100%;
         align-items: center;
@@ -14,10 +14,9 @@
         flex-direction: column;
         height: 100%;
         padding: 5px;
-        text-decoration: none;
-        color: inherit;
         background-image: linear-gradient(to bottom, #002a4b63, #002a4b00);
         border-top: 2px solid $secondary-colour;
+        border-radius: 0 0 8px 8px;
 
         img {
             max-height: 50%;
@@ -54,42 +53,19 @@
             }
         }
         
-        .enterDraw {
-            justify-content: center;
-            align-content: center;
-            margin: 2% 0 1%;
-            border-radius: 15px;
+        .productButton {
             background-image: linear-gradient(to right, #FFDD02, #ff9a02, #ff5405);
-            box-shadow: 0 0 4px #f0f8ffd3;
-            padding: 0 2px;
+            box-shadow: 0 0 4px #FFDD02d3;
             width: 90%;
 
             p {
-                font-size: $content-font-size;
-                cursor: pointer;
-                font-weight: bold;
-                text-align: center;
-                padding-bottom: 1px;
                 color: black;
-            }
-
-            p:nth-child(1) {
-                border-radius: 15px 0 0 15px;
-                width: 75%;
             }
 
             p:nth-child(2) {
                 border-radius: 0 15px 15px 0;
-                border-left: 1px solid #f0f8ffd3;
+                border-left: 1px solid #000000d3;
                 width: 30%;
-            }
-
-            &:hover {
-                box-shadow: 0 0 8px #000000d3;
-
-                p:nth-child(2) {
-                    border-left: 1px solid #000000d3;
-                }
             }
         }
     }
