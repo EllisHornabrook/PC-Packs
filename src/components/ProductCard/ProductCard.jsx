@@ -1,32 +1,31 @@
-import React from "react";
-import { Link } from "@reach/router";
+import React, { useState } from "react";
 import styles from "./ProductCard.module.scss";
+import ProductPage from "../ProductPage";
 
 const ProductCard = (props) => {
+    const { data } = props;
     const { 
         itemName,
         itemImg,
         itemPrice,
-        raffleOdds,
-        // itemInfo,
-        // itemDetails,
-        // maxTickets,
-        // ticketCounter 
-    } = props.data;
+        availableTickets
+    } = data;
+    const [display, setDisplay] = useState(false);
 
     return (
         <article className={styles.cardContainer}>
-            <Link to="/product" className={styles.card}>
+            <div className={styles.card} onClick={() => setDisplay(true)}>
                 <div className={styles.oddsContainer}>
-                    <p>{raffleOdds}</p>
+                    <p>1/{availableTickets}</p>
                 </div>
                 <img src={itemImg} alt="product" />
                 <h3><span>{itemName}</span></h3>
-                <div className={styles.enterDraw}>
+                <div className={styles.productButton}>
                     <p>Enter the draw</p>
                     <p>£{itemPrice}</p>
                 </div>
-            </Link>
+            </div>
+            <ProductPage data={data} display={display} setDisplay={setDisplay} />
         </article>
     );
 };
