@@ -8,6 +8,7 @@ const ProductPage = (props) => {
         itemImg,
         itemPrice,
         itemDetails,
+        itemSpecs,
         availableTickets,
         maxTickets,
         ticketCounter
@@ -21,6 +22,16 @@ const ProductPage = (props) => {
         };
     };
 
+    const specMap = () => itemSpecs.map(spec => {
+        if (itemSpecs) {
+            return (
+                <li>{spec}</li>
+            );
+        } else {
+            return null;
+        };
+    });
+
     return (
         <div style={displayProductPage()} className={styles.product}>
             <div className={styles.articleBorder}>
@@ -28,10 +39,18 @@ const ProductPage = (props) => {
                     <div className={styles.ticketCount}>
                         <p>Tickets: {ticketCounter} / {availableTickets}</p>
                     </div>
-                    <h1>{itemName}</h1>
+                    <h2>{itemName}</h2>
                     <img src={itemImg} alt="product" />
-                    <p>{itemDetails}</p>
-                    <p>£{itemPrice} per ticket. Each customer may purchase a maximum of {maxTickets} tickets.</p>
+                    <div className={styles.divider} />
+                    <p className={styles.productText}>{itemDetails}</p>
+                    <div className={styles.divider} />
+                    <ul className={styles.specList}>
+                        {specMap()}
+                    </ul>
+                    <div className={styles.divider} />
+                    <p className={styles.ticketStatement}>
+                        £{itemPrice} per ticket. Each customer may purchase a maximum of {maxTickets} tickets.
+                    </p>
                     <div className={styles.productButton}>
                         <p>Add to Cart</p>
                     </div>
