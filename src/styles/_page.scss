@@ -25,8 +25,14 @@ main {
             font-size: $page-font-size;
             color: $secondary-colour;
             padding: 0 5%;
-            
         }
+    }
+
+    img {
+        max-height: 50%;
+        height: auto;
+        width: 100%;
+        border-radius: 0 8px 0 8px;
     }
 
     header, section {
@@ -41,6 +47,10 @@ main {
     height: 11vh;
     background-color: $main-colour;
     color: $secondary-colour;
+    
+    a {
+        color: inherit;
+    }
 }
 
 .divider {
