@@ -19,7 +19,7 @@ const ProductCard = (props) => {
                     <p>1/{availableTickets}</p>
                 </div>
                 <img src={itemImg} alt="product" />
-                <h3><span>{itemName}</span></h3>
+                <h3>{itemName}</h3>
                 <div className={styles.productButton}>
                     <p>Enter the draw</p>
                     <p>£{itemPrice}</p>

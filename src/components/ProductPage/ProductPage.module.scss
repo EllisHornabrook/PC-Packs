@@ -9,40 +9,77 @@
     right: 0;
     height: 100%;
     width: 100%;
-    padding: 12vh 6vw;
+    padding: 8vh 6vw;
     z-index: 1;
 
-    article {
-        height: 100%;
-        width: 100%;
-        background-color: $main-colour;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 5%;
-        border-radius: 4px;
-        
-        img {
-            max-height: 50%;
-            height: auto;
-            width: 100%;
-            margin-bottom: auto;
-            border-radius: 0 8px 0 8px;
-        }
-    }
-
-    .productButton {
-        background-image: linear-gradient(to right, #ff00ff, #d900ff, #B10FFF);
-        box-shadow: 0 0 6px #d900ffd3;
-        width: 70%;
-    }
-    
     .articleBorder {
         height: 100%;
         width: 100%;
         padding: 4px;
         border-radius: 8px;
         background-image: linear-gradient(to right, #FFDD02, #ff9a02, #ff5405);
+        box-shadow: 0 0 6px $secondary-colour;
+
+        article {
+            height: 100%;
+            width: 100%;
+            background-color: $background-colour;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 4%;
+            border-radius: 4px;
+    
+            h2 {
+                width: 100%;
+                font-size: $page-font-size;
+                margin: 1vh 0;
+                text-decoration: underline;
+                color: $secondary-colour;
+            }
+    
+            img {
+                border: 1px solid $secondary-colour;
+                max-height: 28%;
+            }
+    
+            .ticketCount {
+                width: 85%;
+                display: flex;
+                justify-content: center;
+                border: 1px solid $secondary-colour;
+        
+                p {
+                    font-size: $content-font-size;
+                }
+            }
+        
+            .productButton {
+                background-image: linear-gradient(to right, #ff00ff, #d900ff, #B10FFF);
+                box-shadow: 0 0 6px #d900ffd3;
+                width: 70%;
+            }
+    
+            .productText, .specList {
+                font-size: $content-font-size;
+            }
+    
+            .specList {
+                color: $secondary-colour;
+                list-style-type: none;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            .ticketStatement {
+                font-size: ($page-font-size - 2.5px);
+                margin: 0.5vh 0;
+                text-align: center;
+            }
+
+            .divider {
+                margin: auto 0;
+            }
+        }
     }
 }
