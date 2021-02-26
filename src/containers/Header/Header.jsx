@@ -1,11 +1,16 @@
 import React from "react";
+import { Link } from "@reach/router";
 import styles from "./Header.module.scss";
 import Nav from "../../components/Nav";
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <h1>PC Picks</h1>
+            <h1>
+                <Link to="/">
+                    PC Picks
+                </Link>
+            </h1>
             <Nav />
         </header>
     );

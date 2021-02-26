@@ -3,9 +3,13 @@
 .header {
     padding: 0 5vw;
     border-bottom: 2px solid $secondary-colour;
-
+    
     h1 {
         width: 70%;
         line-height: 1;
+        
+        a {
+            text-decoration: none;
+        }
     }
 }
