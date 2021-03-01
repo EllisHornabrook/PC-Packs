@@ -31,7 +31,7 @@
         }
 
         .oddsContainer {
-            background-color: #B10FFF;
+            background-color: $accent-colour;
             padding: 0 3px 0 1px;
             font-weight: bold;
             position: absolute;
@@ -40,8 +40,8 @@
             margin-top: 7px;
             margin-right: 5px;
             border-radius: 0 6px 0 0;
-            border-left: 1px solid $background-colour;
-            border-bottom: 1px solid $background-colour;
+            border-left: 1px solid $main-colour;
+            border-bottom: 1px solid $main-colour;
 
             p {
                 font-size: $content-font-size;
