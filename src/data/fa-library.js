@@ -21,7 +21,8 @@ import {
     faToggleOff,
     faShoppingCart,
     faBars,
-    faLayerGroup
+    faLayerGroup,
+    faTimes
 } from "@fortawesome/free-solid-svg-icons";
 // icon={"toggle-off"}
 
@@ -38,5 +39,6 @@ export default library.add(
     faToggleOff,
     faShoppingCart,
     faBars,
-    faLayerGroup
+    faLayerGroup,
+    faTimes
 );

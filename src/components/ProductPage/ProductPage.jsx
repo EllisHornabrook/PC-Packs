@@ -1,5 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./ProductPage.module.scss";
+import soldOut from "../../utils/soldOut";
 
 const ProductPage = (props) => {
     const { data, display, setDisplay } = props;
@@ -22,10 +24,10 @@ const ProductPage = (props) => {
         };
     };
 
-    const specMap = () => itemSpecs.map(spec => {
+    const specMap = () => itemSpecs.map((spec, i) => {
         if (itemSpecs) {
             return (
-                <li>{spec}</li>
+                <li key={i}>{spec}</li>
             );
         } else {
             return null;
@@ -35,13 +37,13 @@ const ProductPage = (props) => {
     return (
         <div style={displayProductPage()} className={styles.product}>
             <div className={styles.articleBorder}>
-                <article onClick={() => setDisplay(false)}>
+                <article>
+                    <FontAwesomeIcon icon={"times"} className={styles.icon} onClick={() => setDisplay(false)} />
                     <div className={styles.ticketCount}>
                         <p>Tickets: {ticketCounter} / {availableTickets}</p>
                     </div>
                     <h2>{itemName}</h2>
                     <img src={itemImg} alt="product" />
-                    <div className={styles.divider} />
                     <p className={styles.productText}>{itemDetails}</p>
                     <div className={styles.divider} />
                     <ul className={styles.specList}>
@@ -49,10 +51,10 @@ const ProductPage = (props) => {
                     </ul>
                     <div className={styles.divider} />
                     <p className={styles.ticketStatement}>
-                        £{itemPrice} per ticket. Each customer may purchase a maximum of {maxTickets} tickets.
+                        £{itemPrice} per ticket. Each customer may purchase a maximum of {maxTickets} tickets. All ticket sales are final.
                     </p>
                     <div className={styles.productButton}>
-                        <p>Add to Cart</p>
+                        {soldOut(availableTickets, ticketCounter, "Add To Cart")}
                     </div>
                 </article>
             </div>
