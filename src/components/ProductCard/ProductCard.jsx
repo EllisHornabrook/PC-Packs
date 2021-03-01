@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./ProductCard.module.scss";
 import ProductPage from "../ProductPage";
+import soldOut from "../../utils/soldOut";
 
 const ProductCard = (props) => {
     const { data } = props;
@@ -8,7 +9,8 @@ const ProductCard = (props) => {
         itemName,
         itemImg,
         itemPrice,
-        availableTickets
+        availableTickets,
+        ticketCounter
     } = data;
     const [display, setDisplay] = useState(false);
 
@@ -21,8 +23,7 @@ const ProductCard = (props) => {
                 <img src={itemImg} alt="product" />
                 <h3>{itemName}</h3>
                 <div className={styles.productButton}>
-                    <p>Enter the draw</p>
-                    <p>£{itemPrice}</p>
+                    {soldOut(availableTickets, ticketCounter, "Enter the draw", `£${itemPrice}`)}
                 </div>
             </div>
             <ProductPage data={data} display={display} setDisplay={setDisplay} />
