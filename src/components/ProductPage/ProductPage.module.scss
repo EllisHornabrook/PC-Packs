@@ -7,8 +7,6 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100%;
-    width: 100%;
     padding: 8vh 6vw;
     z-index: 1;
 
@@ -29,6 +27,7 @@
             align-items: center;
             padding: 4%;
             border-radius: 4px;
+            position: relative;
     
             h2 {
                 width: 100%;
@@ -39,8 +38,17 @@
             }
     
             img {
-                border: 1px solid $secondary-colour;
+                border: 2px solid $accent-colour;
                 max-height: 28%;
+                box-shadow: 0 0 10px #000000;
+                margin-bottom: auto;
+            }
+
+            .icon {
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin: 4% 4% 0 0;
             }
     
             .ticketCount {
@@ -55,13 +63,9 @@
             }
         
             .productButton {
-                background-image: linear-gradient(to right, #ff00ff, #d900ff, #B10FFF);
-                box-shadow: 0 0 6px #d900ffd3;
+                background-image: linear-gradient(to right, #FF00FF, $accent-colour, #B10FFF);
+                box-shadow: 0 0 6px #D900FFD3;
                 width: 70%;
-            }
-    
-            .productText, .specList {
-                font-size: $content-font-size;
             }
     
             .specList {
@@ -72,9 +76,13 @@
             }
     
             .ticketStatement {
-                font-size: ($page-font-size - 2.5px);
-                margin: 0.5vh 0;
+                font-size: $content-font-size;
+                margin-bottom: auto;
                 text-align: center;
+            }
+
+            .productText, .specList {
+                font-size: $content-font-size;
             }
 
             .divider {
