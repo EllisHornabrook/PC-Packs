@@ -8,7 +8,7 @@ const Header = () => {
         <header className={styles.header}>
             <h1>
                 <Link to="/">
-                    PC Picks
+                    The Gaming Lottery
                 </Link>
             </h1>
             <Nav />
