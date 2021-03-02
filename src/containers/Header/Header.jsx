@@ -3,7 +3,9 @@ import { Link } from "@reach/router";
 import styles from "./Header.module.scss";
 import Nav from "../../components/Nav";
 
-const Header = () => {
+const Header = (props) => {
+    const { user } = props;
+    
     return (
         <header className={styles.header}>
             <h1>
@@ -11,7 +13,7 @@ const Header = () => {
                     The Gaming Lottery
                 </Link>
             </h1>
-            <Nav />
+            <Nav user={user} />
         </header>
     );
 };
