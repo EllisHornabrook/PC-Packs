@@ -1,20 +1,19 @@
 @import "./variables";
 
-.productButton {
+.button {
     justify-content: center;
     align-content: center;
     margin: 2% 0 1%;
     border-radius: 15px;
     padding: 0 2px;
-    width: 90%;
     display: flex;
     width: 70%;
     align-items: center;
     cursor: pointer;
+    font-weight: bold;
 
     p {
         font-size: $content-font-size;
-        font-weight: bold;
         text-align: center;
         padding: 0 0 1px 0;
     }
