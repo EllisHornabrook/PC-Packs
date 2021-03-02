@@ -2,20 +2,19 @@ import React from "react";
 import { Link } from "@reach/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Nav.module.scss";
+import userCheck from "../../utils/userCheck";
 
-const Nav = () => {
-    const userCheck = (user) => {
-        if (!user) {
-            return <FontAwesomeIcon icon={["far", "user"]} className={styles.icon} />
-        } else {
-            return <FontAwesomeIcon icon={"user"} className={styles.icon} />
-        };
-    } ;
+const Nav = (props) => {
+    const { user } = props;
 
     return (
         <div className={styles.nav}>
-            <Link to="/" className={styles.link}>
-                {userCheck()}
+            <Link to="/account" className={styles.link}>
+                {userCheck(
+                    user,
+                    <FontAwesomeIcon icon={"user"} className={styles.icon} />,
+                    <FontAwesomeIcon icon={["far", "user"]} className={styles.icon} />
+                )}
             </Link>
             <Link to="/" className={styles.link}>
                 <FontAwesomeIcon icon={"shopping-cart"} className={styles.icon} />
