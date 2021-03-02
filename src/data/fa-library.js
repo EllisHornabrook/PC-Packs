@@ -5,7 +5,8 @@ import {
     faCcApplePay,
     faCcVisa,
     faCcMastercard,
-    faCcAmex
+    faCcAmex,
+    faGoogle
 } from "@fortawesome/free-brands-svg-icons";
 // icon={["fab", "cc-brand"]}
 
@@ -32,6 +33,7 @@ export default library.add(
     faCcVisa,
     faCcMastercard,
     faCcAmex,
+    faGoogle,
     farUser,
     faUser,
     faCaretSquareUp,
