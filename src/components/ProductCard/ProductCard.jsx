@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./ProductCard.module.scss";
 import ProductPage from "../ProductPage";
-import soldOut from "../../utils/soldOut";
+import displaySoldOut from "../../utils/displaySoldOut";
 
 const ProductCard = (props) => {
     const { data } = props;
@@ -22,8 +22,8 @@ const ProductCard = (props) => {
                 </div>
                 <img src={itemImg} alt="product" />
                 <h3>{itemName}</h3>
-                <div className={styles.productButton}>
-                    {soldOut(availableTickets, ticketCounter, "Enter the draw", `£${itemPrice}`)}
+                <div className={styles.button}>
+                    {displaySoldOut(availableTickets, ticketCounter, "Enter the draw", `£${itemPrice}`)}
                 </div>
             </div>
             <ProductPage data={data} display={display} setDisplay={setDisplay} />

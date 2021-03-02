@@ -1,4 +1,4 @@
-const soldOut = (val1, val2, text, price) => {
+const displaySoldOut = (val1, val2, text, price) => {
     const num1 = Math.abs(val1);
     const num2 = Math.abs(val2);
 
@@ -14,4 +14,4 @@ const soldOut = (val1, val2, text, price) => {
     };
 };
 
-export default soldOut;
+export default displaySoldOut;

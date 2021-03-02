@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./ProductPage.module.scss";
-import soldOut from "../../utils/soldOut";
+import displaySoldOut from "../../utils/displaySoldOut";
 
 const ProductPage = (props) => {
     const { data, display, setDisplay } = props;
@@ -53,8 +53,8 @@ const ProductPage = (props) => {
                     <p className={styles.ticketStatement}>
                         £{itemPrice} per ticket. Each customer may purchase a maximum of {maxTickets} tickets. All ticket sales are final.
                     </p>
-                    <div className={styles.productButton}>
-                        {soldOut(availableTickets, ticketCounter, "Add To Cart")}
+                    <div className={styles.button}>
+                        {displaySoldOut(availableTickets, ticketCounter, "Add To Cart")}
                     </div>
                 </article>
             </div>
