@@ -3,7 +3,7 @@ import styles from "./Profile.module.scss";
 
 const Profile = () => {
     return (
-        <>
+        <main>
             <header>
                 <h1>Profile</h1>
             </header>
@@ -13,7 +13,7 @@ const Profile = () => {
                 <p>Email</p>
                 <p>Location</p>
             </section>
-        </>
+        </main>
     );
 };
 
