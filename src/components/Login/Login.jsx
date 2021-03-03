@@ -2,34 +2,38 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Login.module.scss";
 
-const Login = () => {
+const Login = (props) => {
+    const { setFormState } = props;
+
     return (
-        <>
+        <main>
             <header>
                 <h1>Sign In</h1>
             </header>
             <div className={styles.divider} />
-            <section>
-                <form action="" onSubmit={() => {}}>
-                    <div className={styles.formInputs}>
-                        <input type="text" name="email" placeholder="Email" onChange={() => {}} required />
-                        <input type="password" name="password" placeholder="Password" onChange={() => {}} required />
-                    </div>
-                    <button type="submit" className={styles.button}>Sign in</button>
-                    <div className={styles.googleButton} onClick={() => {}}>
-                        <FontAwesomeIcon icon={["fab", "google"]} className={styles.icon} />
-                        <p>Sign in with Google</p>
-                    </div>
-                </form>
-                
-            </section>
-            <div className={styles.divider} />
-            <section>
-                <p>New to the site? 
-                    <button>Register</button>
+            <form action="" onSubmit={() => {}}>
+                <div className={styles.divider} />
+                <div className={styles.formInputs}>
+                    <p>Email</p>
+                    <input type="text" name="email" placeholder="" onChange={() => {}} required />
+                </div>
+                <div className={styles.formInputs}>
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="" onChange={() => {}} required />
+                </div>
+                <button type="submit" className={styles.button}>Sign in</button>
+                <div className={styles.googleButton} onClick={() => {}}>
+                    <FontAwesomeIcon icon={["fab", "google"]} className={styles.icon} />
+                    <p>Sign in with Google</p>
+                </div>
+                <div className={styles.divider} />
+                <p className={styles.formText}>
+                    Are you new here?&nbsp;
+                    <b onClick={() => setFormState("register")}>Register</b>
                 </p>
-            </section>
-        </>
+                <div className={styles.divider} />
+            </form>
+        </main>
     );
 };
 

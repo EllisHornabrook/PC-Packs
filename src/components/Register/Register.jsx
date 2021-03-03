@@ -2,36 +2,46 @@ import React from "react";
 import { Link } from "@reach/router";
 import styles from "./Register.module.scss";
 
-const Register = () => {
+const Register = (props) => {
+    const { setFormState } = props;
+
     return (
-        <>
+        <main>
             <header>
                 <h1>Register</h1>
             </header>
             <div className={styles.divider} />
-            <section>
-                <form action="" onSubmit={() => {}}>
-                    <div className={styles.formInputs}>
-                        <input type="text" placeholder="First Name" required />
-                        <input type="text" placeholder="Last Name" required />
-                    </div>
-                    <div className={styles.formInputs}>
-                        <input type="text" name="email" placeholder="Email" required />
-                        <input type="text" name="password" placeholder="Password" required />
-                    </div>
-                    <p className={styles.termsLink}>By signing up you agree to our &nbsp;
-                        <Link to="/terms">Terms and Conditions</Link>
-                    </p>
-                    <button type="submit" className={styles.button}>Register</button>
-                </form>
-            </section>
-            <div className={styles.divider} />
-            <section>
-                <p>Already have an account? 
-                    <button>Sign in</button>
+            <form action="" onSubmit={() => {}}>  
+                <div className={styles.divider} />       
+                <div className={styles.formInputs}>
+                    <p>First Name</p>
+                    <input type="text" placeholder="" required />
+                </div>
+                <div className={styles.formInputs}>
+                    <p>Last Name</p>
+                    <input type="text" placeholder="" required />
+                </div>
+                <div className={styles.formInputs}>
+                    <p>Email</p>
+                    <input type="text" name="email" placeholder="" required />
+                </div>
+                <div className={styles.formInputs}>
+                    <p>Password</p>
+                    <input type="text" name="password" placeholder="" required />
+                </div>
+                <button type="submit" className={styles.button}>Register</button>
+                <p className={styles.formText}>
+                    By signing up you agree to our&nbsp;
+                    <Link to="/terms">Terms and Conditions</Link>
                 </p>
-            </section>
-        </>   
+                <div className={styles.divider} />
+                <p className={styles.formText}>
+                    Already have an account?&nbsp;
+                    <b onClick={() => setFormState("login")}>Sign in</b>
+                </p>
+                <div className={styles.divider} />
+            </form>
+        </main>   
     );
 };
 
