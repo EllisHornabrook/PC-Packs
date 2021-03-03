@@ -1,1 +1,6 @@
 @import "../../styles/styles.scss";
+
+.button {
+    background-image: linear-gradient(to right, $main-colour, $main-colour, $main-colour);
+    box-shadow: 0 0 6px $main-colour;
+}
