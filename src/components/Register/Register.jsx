@@ -29,7 +29,7 @@ const Register = (props) => {
                     <p>Password</p>
                     <input type="text" name="password" placeholder="" required />
                 </div>
-                <button type="submit" className={styles.button}>Register</button>
+                <button type="submit" className={styles.formButton}>Register</button>
                 <p className={styles.formText}>
                     By signing up you agree to our&nbsp;
                     <Link to="/terms">Terms and Conditions</Link>
