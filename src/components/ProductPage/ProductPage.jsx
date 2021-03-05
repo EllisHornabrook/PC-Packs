@@ -43,7 +43,7 @@ const ProductPage = (props) => {
                         <p>Tickets: {ticketCounter} / {availableTickets}</p>
                     </div>
                     <h2>{itemName}</h2>
-                    <img src={itemImg} alt="product" />
+                    <img src={itemImg} alt={itemName} />
                     <p className={styles.productText}>{itemDetails}</p>
                     <div className={styles.divider} />
                     <ul className={styles.specList}>

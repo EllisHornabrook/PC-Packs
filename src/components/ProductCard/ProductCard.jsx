@@ -20,7 +20,7 @@ const ProductCard = (props) => {
                 <div className={styles.oddsContainer}>
                     <p>1/{availableTickets}</p>
                 </div>
-                <img src={itemImg} alt="product" />
+                <img src={itemImg} alt={itemName} />
                 <h3>{itemName}</h3>
                 <div className={styles.button}>
                     {displaySoldOut(availableTickets, ticketCounter, "Enter the draw", `£${itemPrice}`)}
