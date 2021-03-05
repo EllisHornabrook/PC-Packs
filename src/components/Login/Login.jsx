@@ -1,5 +1,4 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Login.module.scss";
 
 const Login = (props) => {
@@ -24,7 +23,7 @@ const Login = (props) => {
                 <button type="submit" className={styles.formButton}>Sign in</button>
                 <p>― or ―</p>
                 <div className={styles.googleButton} onClick={() => {}}>
-                    <img src='https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA' />
+                    <img src='https://lh3.googleusercontent.com/COxitqgJr1sJnIDe8-jiKhxDx1FrYbtRHKJ9z_hELisAlapwE9LUPh6fcXIfb5vwpbMl4xl9H9TRFPc5NOO8Sb3VSgIBrfRYvW6cUA' alt="Google Logo" />
                     <p>Sign in with Google</p>
                 </div>
                 <div className={styles.divider} />
