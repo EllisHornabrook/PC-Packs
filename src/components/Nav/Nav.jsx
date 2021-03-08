@@ -16,7 +16,7 @@ const Nav = (props) => {
                     <FontAwesomeIcon icon={["far", "user"]} className={styles.icon} />
                 )}
             </Link>
-            <Link to="/" className={styles.link}>
+            <Link to="/checkout" className={styles.link}>
                 <FontAwesomeIcon icon={"shopping-cart"} className={styles.icon} />
             </Link>
             <div>

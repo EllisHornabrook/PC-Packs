@@ -3,6 +3,7 @@ import { Router } from "@reach/router";
 import Home from "../Home";
 import ProductPage from "../../components/ProductPage";
 import Account from "../Account";
+import Checkout from "../Checkout";
 import Terms from "../Terms";
 import PrivacyPolicy from "../PrivacyPolicy";
 import ContactUs from "../ContactUs";
@@ -16,6 +17,7 @@ const Routes = (props) => {
             <Home path="/" />
             <ProductPage path="/product" />
             <Account path="/account" user={user} />
+            <Checkout path="/checkout" />
             <Terms path="/terms" />
             <PrivacyPolicy path="/policy" />
             <ContactUs path="/contact" />
