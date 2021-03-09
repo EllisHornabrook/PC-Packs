@@ -1,7 +1,19 @@
 import React from "react";
 import styles from "./Checkout.module.scss";
 
-const Checkout = () => {
+const Checkout = (props) => {
+    const { cart } = props;
+
+    const cartMap = () => cart.map(product => {
+        return (
+            <div key={product.ticketCounter}>
+                <img src={product.itemImg} alt={product.itemName} />
+                <p>{product.itemName}</p>
+                <p>{product.itemPrice}</p>
+            </div>
+        );
+    });
+
     return (
         <main className={styles.checkout}>
             <header>
@@ -9,9 +21,11 @@ const Checkout = () => {
             </header>
             <div className={styles.divider} />
             <section>
-                <p>Product</p>
+                <div className={styles.divider} />
+                {cartMap()}
+                <div className={styles.divider} />
             </section>
-            <button>Checkout</button>
+            <button className={styles.formButton}>Checkout</button>
         </main>
     );
 };
