@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import Nav from "../../components/Nav";
 
 const Header = (props) => {
-    const { user } = props;
+    const { user, cart } = props;
     
     return (
         <header className={styles.header}>
@@ -13,7 +13,7 @@ const Header = (props) => {
                     The Gaming Lottery
                 </Link>
             </h1>
-            <Nav user={user} />
+            <Nav user={user} cart={cart} />
         </header>
     );
 };

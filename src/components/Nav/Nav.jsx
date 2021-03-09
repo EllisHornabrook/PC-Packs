@@ -5,7 +5,7 @@ import styles from "./Nav.module.scss";
 import userCheck from "../../utils/userCheck";
 
 const Nav = (props) => {
-    const { user } = props;
+    const { user, cart } = props;
 
     return (
         <div className={styles.nav}>
