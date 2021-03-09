@@ -4,8 +4,8 @@ import ProductPage from "../ProductPage";
 import displaySoldOut from "../../utils/displaySoldOut";
 
 const ProductCard = (props) => {
-    const { data } = props;
-    const { 
+    const { data, cart, setCart } = props;
+    const {
         itemName,
         itemImg,
         itemPrice,
@@ -23,10 +23,21 @@ const ProductCard = (props) => {
                 <img src={itemImg} alt={itemName} />
                 <h3>{itemName}</h3>
                 <div className={styles.button}>
-                    {displaySoldOut(availableTickets, ticketCounter, "Enter the draw", `£${itemPrice}`)}
+                    {displaySoldOut(
+                        availableTickets,
+                        ticketCounter,
+                        "Enter the draw",
+                        `£${itemPrice}`
+                    )}
                 </div>
             </div>
-            <ProductPage data={data} display={display} setDisplay={setDisplay} />
+            <ProductPage
+                data={data}
+                display={display}
+                setDisplay={setDisplay}
+                cart={cart}
+                setCart={setCart}
+            />
         </article>
     );
 };
