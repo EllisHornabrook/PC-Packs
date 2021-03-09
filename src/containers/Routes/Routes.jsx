@@ -1,7 +1,6 @@
 import React from "react";
 import { Router } from "@reach/router";
 import Home from "../Home";
-import ProductPage from "../../components/ProductPage";
 import Account from "../Account";
 import Checkout from "../Checkout";
 import Terms from "../Terms";
@@ -10,14 +9,13 @@ import ContactUs from "../ContactUs";
 import NotFound from "../NotFound";
 
 const Routes = (props) => {
-    const { user } = props;
+    const { user, cart, setCart } = props;
 
     return (
         <Router>
-            <Home path="/" />
-            <ProductPage path="/product" />
+            <Home path="/" cart={cart} setCart={setCart} />
             <Account path="/account" user={user} />
-            <Checkout path="/checkout" />
+            <Checkout path="/checkout" cart={cart} />
             <Terms path="/terms" />
             <PrivacyPolicy path="/policy" />
             <ContactUs path="/contact" />
