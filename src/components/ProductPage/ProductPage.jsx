@@ -4,7 +4,7 @@ import styles from "./ProductPage.module.scss";
 import displaySoldOut from "../../utils/displaySoldOut";
 
 const ProductPage = (props) => {
-    const { data, display, setDisplay } = props;
+    const { data, display, setDisplay, cart, setCart } = props;
     const { 
         itemName,
         itemImg,
@@ -16,29 +16,18 @@ const ProductPage = (props) => {
         ticketCounter
     } = data;
 
-    const displayProductPage = () => {
-        if (display) {
-            return {display: "block"};
-        } else {
-            return null;
-        };
-    };
-
-    const specMap = () => itemSpecs.map((spec, i) => {
-        if (itemSpecs) {
-            return (
-                <li key={i}>{spec}</li>
-            );
-        } else {
-            return null;
-        };
-    });
+    const displayProductPage = display ? {display: "block"} : null;
+    const addToCart = (availableTickets > ticketCounter) ? cart => [...cart, data] : cart;
 
     return (
-        <div style={displayProductPage()} className={styles.product}>
+        <div style={displayProductPage} className={styles.product}>
             <div className={styles.articleBorder}>
                 <article>
-                    <FontAwesomeIcon icon={"times"} className={styles.icon} onClick={() => setDisplay(false)} />
+                    <FontAwesomeIcon 
+                        icon={"times"} 
+                        className={styles.icon} 
+                        onClick={() => setDisplay(false)} 
+                    />
                     <div className={styles.ticketCount}>
                         <p>Tickets: {ticketCounter} / {availableTickets}</p>
                     </div>
@@ -47,14 +36,23 @@ const ProductPage = (props) => {
                     <p className={styles.productText}>{itemDetails}</p>
                     <div className={styles.divider} />
                     <ul className={styles.specList}>
-                        {specMap()}
+                        {itemSpecs.map((spec, i) => 
+                            itemSpecs ? <li key={i}>{spec}</li> : null
+                        )}
                     </ul>
                     <div className={styles.divider} />
                     <p className={styles.ticketStatement}>
                         £{itemPrice} per ticket. Each customer may purchase a maximum of {maxTickets} tickets. All ticket sales are final.
                     </p>
-                    <div className={styles.button}>
-                        {displaySoldOut(availableTickets, ticketCounter, "Add To Cart")}
+                    <div
+                        className={styles.button}
+                        onClick={() => setCart(addToCart)}
+                    >
+                        {displaySoldOut(
+                            availableTickets, 
+                            ticketCounter, 
+                            "Add To Cart"
+                        )}
                     </div>
                 </article>
             </div>
