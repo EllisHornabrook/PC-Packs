@@ -7,12 +7,13 @@ import Footer from "./containers/Footer";
 
 const App = () => {
     const [user, setUser] = useState(null);
+    const [cart, setCart] = useState([]);
 
     return (
         <>
-            <Header user={user} />
+            <Header user={user} cart={cart} />
 
-            <Routes user={user} />
+            <Routes user={user} cart={cart} setCart={setCart} />
 
             <Footer />
         </>
